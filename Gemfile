@@ -20,6 +20,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'overmind'
   gem 'web-console'
 end
 

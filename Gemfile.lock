@@ -185,6 +185,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
+    overmind (2.5.1)
+    overmind (2.5.1-arm-linux)
+    overmind (2.5.1-arm64-darwin)
+    overmind (2.5.1-x86-linux)
+    overmind (2.5.1-x86_64-darwin)
     pg (1.5.6)
     propshaft (0.9.0)
       actionpack (>= 7.0.0)
@@ -267,6 +272,7 @@ DEPENDENCIES
   capybara
   debug
   image_processing (~> 1.2)
+  overmind
   pg (~> 1.1)
   propshaft
   puma (>= 5.0)
