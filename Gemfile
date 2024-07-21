@@ -10,8 +10,6 @@ gem 'pg', '~> 1.1'
 gem 'propshaft'
 gem 'puma', '>= 5.0'
 gem 'rails', github: 'rails/rails', branch: '7-1-stable'
-gem 'stimulus-rails'
-gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'vite_rails'
 
