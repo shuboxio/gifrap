@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.3.4'
+ruby file: '.tool-versions'
 
 gem 'bootsnap', require: false
 gem 'image_processing', '~> 1.2'
