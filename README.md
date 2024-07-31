@@ -1,24 +1,73 @@
-# README
+# Gifrap
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We *live* on the internet (let's be real).
 
-Things you may want to cover:
+To be fluent in "internet", you need text, and emoji, and ... memes! To have those, we need _the animated gif_.
 
-* Ruby version
+So, in service of having fun, and owning our media and images, let's build ourselves our own database of meme goodness.
 
-* System dependencies
+_Gifrap_ is a self-hosted repository of animated gifs, and jpgs, etc.
 
-* Configuration
+## Stack
 
-* Database creation
+* Rails 7.x
+* Postgresql
+* Rspec (factory_bot, cuprite, capybara)
+* GoodJob
+* Vite (w/vite_ruby)
+* TailwindCSS
+* StimulusJS
 
-* Database initialization
+## Set Up
 
-* How to run the test suite
+Run `bin/setup` to:
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Create database
+2. Seed database
+3. Run the test suite
 
-* Deployment instructions
+## Features
 
-* ...
+This is currently pre-alpha software - well in the throes of early development.
+
+Below is the breakdown of features being built along with a couple of milestones.
+
+## Alpha
+
+- [ ] Generate models and create controller skeleton
+- [ ] Upload image via web browser
+    - [ ] Integration with Shubox
+- [ ] Rough layout and UI
+    - [ ] Masonry layout of images
+- [ ] `Images#show`
+    - [ ] click to copy URL
+- [ ] `Images#edit`
+    - [ ] Add tags to image
+    - [ ] Add descriptions to image. (Allows for future retrieval of image via a phrase or file name -- matching "mark-cuban-taking-notes.gif" OR "taking-notes.gif" to the proper image)
+- [ ] No account(s)/users. Log-in via email.
+
+## Beta
+
+- [ ] Convert gif to webm and mp4 (smaller files)
+- [ ] Extract frame of gif to jpg/webp/avif
+- [ ] Upload via URL
+- [ ] `Images#index`
+    - [ ] blur/obfuscate "nsfw" images
+- [ ] `Images#show`
+    - [ ] display tags
+    - [ ] fav image
+- [ ] `Images#edit`
+    - [ ] Tag image as "nsfw"
+- [ ] Search for image(s)
+    - [ ] Search by tags and descriptions
+    - [ ] Order by owner (show me mine first), then others.
+    - [ ]
+
+## v1.0
+
+- [ ] Containerize/Dockerize each version, push to docker-hub
+    - [ ] Example docker-compose setup in README
+
+## v2.0
+
+- [ ] Slack bot. Respond to a message containing a string like "taking-notes.gif" and responding with the correct image.
