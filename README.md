@@ -28,6 +28,8 @@ Run `bin/setup` to:
 
 ## Features
 
+![Building](https://media.tenor.com/gBlnBO1ov9YAAAAM/hammer-tools.gif)
+
 This is currently pre-alpha software - well in the throes of early development.
 
 Below is the breakdown of features being built along with a couple of milestones.
@@ -71,3 +73,8 @@ Below is the breakdown of features being built along with a couple of milestones
 ## v2.0
 
 - [ ] Slack bot. Respond to a message containing a string like "taking-notes.gif" and responding with the correct image.
+
+### Finally
+
+![tttthhhhank you](https://c.tenor.com/K-NT5HJdVzoAAAAC/tenor.gif)
+
