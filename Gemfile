@@ -8,7 +8,7 @@ gem 'bootsnap', require: false
 gem 'image_processing', '~> 1.2'
 gem 'pg', '~> 1.1'
 gem 'propshaft'
-gem 'puma', '>= 5.0'
+gem 'puma'
 gem 'rails', github: 'rails/rails', branch: '7-1-stable'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'vite_rails'
@@ -24,4 +24,5 @@ end
 
 group :test do
   gem 'capybara'
+  gem 'rspec-rails'
 end
