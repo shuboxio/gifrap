@@ -1,0 +1,16 @@
+require:
+ - rubocop-performance
+ - rubocop-rails
+ - rubocop-rspec
+ - rubocop-rspec_rails
+ - rubocop-capybara
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'config/**/*'
+
+Style/Documentation:
+  Enabled: false
