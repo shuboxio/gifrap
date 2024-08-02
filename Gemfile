@@ -25,6 +25,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'cuprite'
   gem 'overmind'
   gem 'web-console'
 end
