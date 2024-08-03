@@ -15,9 +15,13 @@ module Gifrap
     config.autoload_lib(ignore: %w[assets tasks])
 
     config.generators do |g|
-      g.test_framework :rspec
-      g.orm :active_record, primary_key_type: :uuid
       g.factory_bot dir: 'spec/factories'
+      g.helper false
+      g.orm :active_record, primary_key_type: :uuid
+      g.request_specs false
+      g.routing_specs false
+      g.test_framework :rspec
+      g.view_specs false
     end
 
     # Configuration for the application, engines, and railties goes here.
