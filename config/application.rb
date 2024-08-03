@@ -17,6 +17,7 @@ module Gifrap
     config.generators do |g|
       g.test_framework :rspec
       g.orm :active_record, primary_key_type: :uuid
+      g.factory_bot dir: 'spec/factories'
     end
 
     # Configuration for the application, engines, and railties goes here.

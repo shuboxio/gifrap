@@ -135,6 +135,11 @@ GEM
     drb (2.2.1)
     dry-cli (1.1.0)
     erubi (1.13.0)
+    factory_bot (6.4.6)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.4.3)
+      factory_bot (~> 6.4)
+      railties (>= 5.0.0)
     ferrum (0.15)
       addressable (~> 2.5)
       concurrent-ruby (~> 1.1)
@@ -333,6 +338,7 @@ DEPENDENCIES
   capybara
   cuprite
   debug
+  factory_bot_rails
   image_processing (~> 1.2)
   overmind
   pg (~> 1.1)
