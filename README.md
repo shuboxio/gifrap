@@ -36,7 +36,8 @@ Below is the breakdown of features being built along with a couple of milestones
 
 ## Alpha
 
-- [ ] Generate models and create controller skeleton
+- [x] Generate temporary "visitor" user
+- [x] Generate models and create controller skeleton
 - [ ] Upload image via web browser
     - [ ] Integration with Shubox
 - [ ] Rough layout and UI
