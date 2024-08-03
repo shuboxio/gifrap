@@ -5,8 +5,10 @@ source 'https://rubygems.org'
 ruby file: '.tool-versions'
 
 gem 'bootsnap', require: false
-gem 'image_processing', '~> 1.2'
-gem 'pg', '~> 1.1'
+gem 'faker', require: false
+gem 'image_processing'
+gem 'nanoid', require: false
+gem 'pg'
 gem 'propshaft'
 gem 'puma'
 gem 'rails', github: 'rails/rails', branch: '7-1-stable'

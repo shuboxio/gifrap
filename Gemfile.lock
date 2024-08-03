@@ -140,6 +140,8 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     ferrum (0.15)
       addressable (~> 2.5)
       concurrent-ruby (~> 1.1)
@@ -180,6 +182,7 @@ GEM
     minitest (5.24.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    nanoid (2.0.0)
     net-imap (0.4.14)
       date
       net-protocol
@@ -341,9 +344,11 @@ DEPENDENCIES
   cuprite
   debug
   factory_bot_rails
-  image_processing (~> 1.2)
+  faker
+  image_processing
+  nanoid
   overmind
-  pg (~> 1.1)
+  pg
   propshaft
   puma
   rails!
