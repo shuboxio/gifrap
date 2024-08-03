@@ -4,6 +4,6 @@ FactoryBot.define do
   factory :image_description do
     image
 
-    description { "sample gif" }
+    description { 'sample gif' }
   end
 end

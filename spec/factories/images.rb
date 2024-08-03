@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :image do
     user
 
-    url { https://picsum.photos/200/300 }
+    url { 'https://picsum.photos/200/300' }
     variants { {} }
     nsfw { DateTime.current }
   end
