@@ -28,12 +28,12 @@ group :development, :test do
 end
 
 group :development do
-  gem 'cuprite'
   gem 'overmind'
   gem 'web-console'
 end
 
 group :test do
   gem 'capybara'
+  gem 'cuprite'
   gem 'factory_bot_rails'
 end
