@@ -1,0 +1,11 @@
+<%= form_with model: image, class: "bg-white p-8 rounded" do |form| %>
+  <%= image_tag image.url, alt: "Image to upload", data: { gif: "" } %>
+
+  <%= form.label :nsfw do %>
+    Not safe for work
+    <%= form.check_box :nsfw %>
+  <% end %>
+
+  <%= form.hidden_field :url %>
+  <%= form.submit "Save" %>
+<% end %>

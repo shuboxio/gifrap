@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
 
   def init_user
     @user = User.where(token: cookies[:token]).first
+    @first_visit = nil
 
     return if @user.present?
 
@@ -23,5 +24,6 @@ class ApplicationController < ActionController::Base
     name            = "#{Faker::Color.color_name} #{Faker::Creature::Animal.name}".titleize
     cookies[:token] = { value: token, expires: 5.years.from_now }
     @user           = User.create(token:, name:)
+    @first_visit    = true
   end
 end

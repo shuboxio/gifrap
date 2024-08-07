@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dz-drag-hover {
+  @apply border-dashed border-black bg-yellow-200;
+}
