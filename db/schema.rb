@@ -15,6 +15,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_01_194909) do
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
 
+  create_table "image_descriptions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "image_id", null: false
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["image_id"], name: "index_image_descriptions_on_image_id"
+  end
+
   create_table "images", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "url"
     t.jsonb "variants"
@@ -25,15 +33,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_01_194909) do
     t.index ["user_id"], name: "index_images_on_user_id"
   end
 
-  create_table "image_descriptions", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
-    t.uuid "image_id", null: false
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["image_id"], name: "index_image_descriptions_on_image_id"
-  end
-
-
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "email"
     t.string "token"
@@ -42,6 +41,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_01_194909) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "images", "users"
   add_foreign_key "image_descriptions", "images"
+  add_foreign_key "images", "users"
 end
