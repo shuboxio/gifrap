@@ -6,7 +6,7 @@ require 'nanoid'
 class ApplicationController < ActionController::Base
   before_action :init_user
 
-  helper_method :current_user
+  helper_method :current_user, :turbo_frame?
 
   def current_user
     @current_user ||= @user
@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
 
   def init_user
     @user = User.where(token: cookies[:token]).first
+    @first_visit = nil
 
     return if @user.present?
 
@@ -23,5 +24,10 @@ class ApplicationController < ActionController::Base
     name            = "#{Faker::Color.color_name} #{Faker::Creature::Animal.name}".titleize
     cookies[:token] = { value: token, expires: 5.years.from_now }
     @user           = User.create(token:, name:)
+    @first_visit    = true
+  end
+
+  def turbo_frame?
+    request.headers['Turbo-Frame'].present?
   end
 end

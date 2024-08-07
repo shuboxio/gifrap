@@ -1,2 +1,9 @@
 ---
 en:
+  images:
+    create:
+      created: Image was successfully created
+    destroy:
+      destroyed: Image was successfully destroyed
+    update:
+      updated: Image was successfully updated

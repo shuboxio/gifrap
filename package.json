@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@hotwired/turbo": "^8.0.5",
+    "@hotwired/turbo-rails": "^8.0.5",
     "autoprefixer": "^10.4.19",
     "postcss": "^8.4.39",
     "tailwindcss": "^3.4.6",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
+    "shubox": "^1.1.0",
     "stimulus-vite-helpers": "^3.1.0"
   }
 }
