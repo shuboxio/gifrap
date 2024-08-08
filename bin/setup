@@ -19,6 +19,7 @@ FileUtils.chdir APP_ROOT do
   system! 'gem install bundler --conservative'
   system('bundle check') || system!('bundle install')
   system!('npm install')
+  system!('cp .env.sample .env.development') unless File.exist?('.env.development')
 
   puts "\n== Test build of Vite assets =="
   system! 'bundle exec vite build --clear --mode=test'

@@ -17,6 +17,7 @@ gem 'vite_rails'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
+  gem 'dotenv'
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-capybara', require: false
