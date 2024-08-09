@@ -10,7 +10,6 @@
 
   <button class="shubox-clickable">Click to Upload</button>
 
-  <turbo-frame id="uploader" class="hidden h-screen items-center justify-center"></turbo-frame>
-
+  <%= turbo_frame_tag "uploader", class: "hidden h-screen items-center justify-center", target: "_top" %>
   <%= render @images %>
 </div>
