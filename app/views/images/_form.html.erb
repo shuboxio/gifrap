@@ -1,0 +1,19 @@
+<%= form_with model: image do |form| %>
+  <%= image_tag image.url, alt: "Image to upload", data: { gif: "" } %>
+
+  <% if form.object.url.blank? %>
+    <%= form.label :url do %>
+      Image URL
+      <%= form.text_field :url %>
+    <% end %>
+  <% else %>
+    <%= form.hidden_field :url %>
+  <% end %>
+
+  <%= form.label :nsfw do %>
+    Not safe for work
+    <%= form.check_box :nsfw %>
+  <% end %>
+
+  <%= form.submit "Save" %>
+<% end %>

@@ -19,6 +19,9 @@ Style/Documentation:
 RSpec/MultipleExpectations:
   Enabled: false
 
+RSpec/ExampleLength:
+  Max: 20
+
 Metrics/MethodLength:
   Exclude:
     - 'db/**/*'
