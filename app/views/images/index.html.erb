@@ -13,12 +13,17 @@
     </div>
   <% end %>
 
-  <div id="container" class="relative border-4 border-transparent" data-controller="uploader" data-shubox-key="<%= ENV['SHUBOX_KEY'] %>">
+  <div
+    id="container"
+    class="h-screen"
+    data-controller="uploader"
+    data-action="keydown.esc->uploader#close"
+    data-shubox-key="<%= ENV['SHUBOX_KEY'] %>"
+    >
     Drag and drop
+
     <button>Click to Upload</button>
 
-    <div id="image_form" class="fixed inset-0 hidden items-center justify-center bg-gray-900 bg-opacity-50">
-      <%= render partial: "images/form", locals: { image: @image } %>
-    </div>
+    <turbo-frame id="uploader" class="hidden h-screen items-center justify-center"></turbo-frame>
   </div>
 </div>

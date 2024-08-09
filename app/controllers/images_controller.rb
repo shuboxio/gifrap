@@ -7,7 +7,9 @@ class ImagesController < ApplicationController
   end
 
   def new
-    @image = Image.new(url: '')
+    url = CGI.unescape(params.fetch(:url, ''))
+
+    @image = Image.new(url:)
   end
 
   def edit
@@ -18,7 +20,7 @@ class ImagesController < ApplicationController
     @image = Image.new(image_params)
 
     if @image.save
-      redirect_to root_path, notice: 'Image was successfully created.'
+      redirect_to root_path, notice: t('.created')
     else
       render :new
     end
@@ -28,7 +30,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
 
     if @image.update(image_params)
-      redirect_to root_path, notice: 'Image was successfully updated.'
+      redirect_to root_path, notice: t('.updated')
     else
       render :edit
     end
@@ -38,7 +40,7 @@ class ImagesController < ApplicationController
     @image = Image.find(params[:id])
     @image.destroy
 
-    redirect_to root_path, notice: 'Image was successfully destroyed'
+    redirect_to root_path, notice: t('.destroyed')
   end
 
   private
