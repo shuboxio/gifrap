@@ -3,31 +3,31 @@
 class ImagesController < ApplicationController
   def index
     @images = Image.all
-    @image = Image.new(url: '')
+    @image = current_user.images.new(url: '')
   end
 
   def new
     url = CGI.unescape(params.fetch(:url, ''))
 
-    @image = Image.new(url:)
+    @image = current_user.images.new(url:)
   end
 
   def edit
-    @image = Image.find(params[:id])
+    @image = current_user.images.find(params[:id])
   end
 
   def create
-    @image = Image.new(image_params)
+    @image = current_user.images.new(image_params)
 
     if @image.save
-      redirect_to root_path, notice: t('.created')
+      redirect_to root_path, notice: t('.created'), status: :see_other
     else
       render :new
     end
   end
 
   def update
-    @image = Image.find(params[:id])
+    @image = current_user.images.find(params[:id])
 
     if @image.update(image_params)
       redirect_to root_path, notice: t('.updated')
@@ -37,7 +37,7 @@ class ImagesController < ApplicationController
   end
 
   def destroy
-    @image = Image.find(params[:id])
+    @image = current_user.images.find(params[:id])
     @image.destroy
 
     redirect_to root_path, notice: t('.destroyed')

@@ -1,29 +1,16 @@
-<div id="wrapper" class="">
-  <div id="nav" class="" data-nav="true">
-    <%= link_to "Gifrap", root_path %>
 
-    <span class="" data-name="true"><%= current_user.name %></span>
+<div
+  id="container"
+  class="h-screen"
+  data-controller="uploader"
+  data-action="keydown.esc->uploader#close"
+  data-shubox-key="<%= ENV['SHUBOX_KEY'] %>"
+  >
+  Drag and drop
 
-    <%= link_to "New Image", new_image_path %>
-  </div>
+  <button class="shubox-clickable">Click to Upload</button>
 
-  <% if @first_visit %>
-    <div id="welcome" class="" data-welcome="true">
-      Welcome to Gifrap!
-    </div>
-  <% end %>
+  <turbo-frame id="uploader" class="hidden h-screen items-center justify-center"></turbo-frame>
 
-  <div
-    id="container"
-    class="h-screen"
-    data-controller="uploader"
-    data-action="keydown.esc->uploader#close"
-    data-shubox-key="<%= ENV['SHUBOX_KEY'] %>"
-    >
-    Drag and drop
-
-    <button>Click to Upload</button>
-
-    <turbo-frame id="uploader" class="hidden h-screen items-center justify-center"></turbo-frame>
-  </div>
+  <%= render @images %>
 </div>
