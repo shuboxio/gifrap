@@ -7,10 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2024-08-09
+
+### Added
+
 - v0.1.2 Initial scaffolding of image creation functionality
-  - Add i18n-tasks gem to keep all locales clean and up to snuff
-  - Set up dot-env for good local dev ENV management
-  - Add rspec binstub
+- v0.1.2 Add i18n-tasks gem to keep all locales clean and up to snuff
+- v0.1.2 Set up dot-env for good local dev ENV management
+- v0.1.2 Add rspec binstub
 
 ### Added
 

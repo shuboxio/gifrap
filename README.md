@@ -38,9 +38,12 @@ Below is the breakdown of features being built along with a couple of milestones
 
 - [x] Generate temporary "visitor" user
 - [x] Generate models and create controller skeleton
-- [ ] Upload image via web browser
-    - [ ] Integration with Shubox
+- [x] Upload image via web browser
+    - [x] Integration with Shubox
 - [ ] Rough layout and UI
+    - [ ] Nav
+    - [ ] Flash messages
+    - [ ] Upload and new image modal
     - [ ] Masonry layout of images
 - [ ] `Images#show`
     - [ ] click to copy URL
@@ -53,7 +56,7 @@ Below is the breakdown of features being built along with a couple of milestones
 
 - [ ] Convert gif to webm and mp4 (smaller files)
 - [ ] Extract frame of gif to jpg/webp/avif
-- [ ] Upload via URL
+- [x] Upload via URL
 - [ ] `Images#index`
     - [ ] blur/obfuscate "nsfw" images
 - [ ] `Images#show`
