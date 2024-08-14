@@ -12,7 +12,7 @@ gem 'nanoid', require: false
 gem 'pg'
 gem 'propshaft'
 gem 'puma'
-gem 'rails', github: 'rails/rails', branch: '7-1-stable'
+gem 'rails', github: 'rails/rails', branch: '7-2-stable'
 gem 'redis'
 gem 'turbo-rails'
 gem 'tzinfo-data', platforms: %i[windows jruby]
