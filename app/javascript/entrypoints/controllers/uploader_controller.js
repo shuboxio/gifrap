@@ -12,7 +12,6 @@ export default class extends Controller {
         {
           key: shuboxKey,
           previewsContainer: false,
-          clickable: '.shubox-clickable',
           success: this.uploadSuccess.bind(this)
         }
       )

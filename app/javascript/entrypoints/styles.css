@@ -5,3 +5,11 @@
 .dz-drag-hover {
   @apply border-dashed border-black bg-yellow-200;
 }
+
+.flash-notice {
+  @apply bg-green-400 text-green-800;
+}
+
+.flash-error {
+  @apply bg-red-100 text-red-800;
+}

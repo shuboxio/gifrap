@@ -41,10 +41,10 @@ Below is the breakdown of features being built along with a couple of milestones
 - [x] Upload image via web browser
     - [x] Integration with Shubox
 - [ ] Rough layout and UI
-    - [ ] Nav
-    - [ ] Flash messages
+    - [x] Nav
+    - [x] Masonry layout of images
+    - [x] Flash messages
     - [ ] Upload and new image modal
-    - [ ] Masonry layout of images
 - [ ] `Images#show`
     - [ ] click to copy URL
 - [ ] `Images#edit`

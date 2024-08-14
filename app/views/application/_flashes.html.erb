@@ -1,6 +1,6 @@
 <% if flash.any? %>
   <% flash.each do |key, value| %>
-    <div class="flash flash-<%= key %> bg-shubox-light-purple flex items-center justify-center p-6 text-center text-lg">
+    <div class="flash-<%= key %> mx-auto my-3 flex max-w-5xl items-center justify-center rounded-xl p-6 text-center text-lg">
       <div><%= value %></div>
     </div>
   <% end %>

@@ -1,18 +1,13 @@
-
 <div
   id="container"
-  class="h-screen"
+  class="mx-auto h-screen max-w-5xl "
   data-controller="uploader"
   data-action="keydown.esc->uploader#close"
-  data-shubox-key="<%= ENV['SHUBOX_KEY'] %>"
-  >
-  Drag and drop
+  data-shubox-key="<%= ENV['SHUBOX_KEY'] %>">
 
-  <button class="shubox-clickable">Click to Upload</button>
-
-  <%= turbo_frame_tag "uploader", class: "hidden h-screen items-center justify-center", target: "_top" %>
-
-  <div class="mx-auto max-w-5xl columns-2 gap-4 space-y-4 md:columns-4">
+  <div class="columns-2 gap-4 space-y-4 md:columns-4">
     <%= render @images %>
   </div>
 </div>
+
+<%= turbo_frame_tag "uploader", class: "hidden h-screen items-center justify-center", target: "_top" %>
