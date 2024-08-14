@@ -12,22 +12,10 @@
   </head>
 
   <body>
-    <div id="wrapper" class="">
-      <div id="nav" class="" data-nav="true">
-        <%= link_to "Gifrap", root_path %>
-        <span class="" data-name="true"><%= current_user.name %></span>
-        <%= link_to "New Image", new_image_path %>
-      </div>
+    <%= render "nav" %>
+    <%= render "first_visit" %>
+    <%= render "flashes" %>
 
-      <% if @first_visit %>
-        <div id="welcome" class="" data-welcome="true">
-          Welcome to Gifrap!
-        </div>
-      <% end %>
-
-      <%= render "flashes" %>
-
-      <%= yield %>
-    </div>
+    <%= yield %>
   </body>
 </html>

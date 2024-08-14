@@ -1,0 +1,13 @@
+<nav class="mx-auto my-3 flex max-w-5xl flex-wrap items-center justify-between rounded-xl bg-indigo-300 p-6">
+  <div class="mr-6 flex flex-shrink-0 items-center text-white">
+    <%= link_to "Gifrap", root_path, class: "text-xl font-semibold tracking-tight" %>
+  </div>
+
+  <div class="flex w-auto flex-grow items-center justify-end">
+    <span class="mr-6 inline-block text-white">
+      "<%= current_user.name %>"
+    </span>
+
+    <a href="#" title="Sign in with email" class="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-transparent hover:bg-white hover:text-indigo-500 lg:mt-0">Sign In</a>
+  </div>
+</nav>
