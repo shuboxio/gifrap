@@ -40,17 +40,17 @@ Below is the breakdown of features being built along with a couple of milestones
 - [x] Generate models and create controller skeleton
 - [x] Upload image via web browser
     - [x] Integration with Shubox
-- [ ] Rough layout and UI
+- [x] Rough layout and UI
     - [x] Nav
     - [x] Masonry layout of images
     - [x] Flash messages
-    - [ ] Upload and new image modal
+    - [x] Upload and new image modal
+- [ ] No account(s)/users. Log-in via email.
 - [ ] `Images#show`
     - [ ] click to copy URL
 - [ ] `Images#edit`
     - [ ] Add tags to image
     - [ ] Add descriptions to image. (Allows for future retrieval of image via a phrase or file name -- matching "mark-cuban-taking-notes.gif" OR "taking-notes.gif" to the proper image)
-- [ ] No account(s)/users. Log-in via email.
 
 ## Beta
 
