@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.3] - 2024-08-15
+
+### Fixed
+
+- v0.1.3 Nav, flashes, image, and general layout all semi-reasonable in how they are displayed
+- v0.1.3 Images displayed in a masonry layout (thanks to CSS columns)
+- v0.1.3 Images#new correctly displaying via modal upon file upload, and when visited directly
+
 ## [1.1.2] - 2024-08-09
 
 ### Added

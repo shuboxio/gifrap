@@ -67,7 +67,6 @@ Below is the breakdown of features being built along with a couple of milestones
 - [ ] Search for image(s)
     - [ ] Search by tags and descriptions
     - [ ] Order by owner (show me mine first), then others.
-    - [ ]
 
 ## v1.0
 
