@@ -1,8 +1,8 @@
 <%= form_with model: image do |form| %>
-  <%= image_tag image.url, alt: "Image to upload", data: { gif: "" } %>
+  <%= image_tag image.url, alt: "Image to upload", class: "max-w-full", data: { gif: "" } %>
 
   <% if form.object.url.blank? %>
-    <%= form.label :url do %>
+    <%= form.label :url, class: "py-2 block" do %>
       Image URL
       <%= form.text_field :url %>
     <% end %>
@@ -10,10 +10,10 @@
     <%= form.hidden_field :url %>
   <% end %>
 
-  <%= form.label :nsfw do %>
+  <%= form.label :nsfw, class: "py-2 block" do %>
     Not safe for work
     <%= form.check_box :nsfw %>
   <% end %>
 
-  <%= form.submit "Save" %>
+  <%= form.submit "Save", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
 <% end %>

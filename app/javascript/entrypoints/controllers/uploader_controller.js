@@ -22,7 +22,7 @@ export default class extends Controller {
       const uploaderFrame = document.querySelector('turbo-frame#uploader')
 
       uploaderFrame.src = path
-      uploaderFrame.classList.replace('hidden', 'flex')
+      uploaderFrame.classList.replace('hidden', 'fixed')
       history.pushState({}, '', path)
     }
 
