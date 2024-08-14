@@ -12,12 +12,7 @@
 
   <%= turbo_frame_tag "uploader", class: "hidden h-screen items-center justify-center", target: "_top" %>
 
-  <div class="mx-auto grid max-w-5xl grid-cols-2 gap-4 md:grid-cols-4">
-    <div class="grid gap-4">
-      <% @images.each_with_index do |image, index| %>
-        <%= render image %><!-- <%= index %> -->
-        <% if (index + 1) % 3 == 0 %></div><div class="grid gap-4"><% end %>
-      <% end %>
-    </div>
+  <div class="mx-auto max-w-5xl columns-2 gap-4 space-y-4 md:columns-4">
+    <%= render @images %>
   </div>
 </div>
