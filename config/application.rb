@@ -24,6 +24,8 @@ module Gifrap
       g.view_specs false
     end
 
+    config.active_job.queue_adapter = :good_job
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

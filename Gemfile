@@ -6,6 +6,7 @@ ruby file: '.tool-versions'
 
 gem 'bootsnap', require: false
 gem 'faker', require: false
+gem 'good_job'
 gem 'image_processing'
 gem 'nanoid', require: false
 gem 'pg'

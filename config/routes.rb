@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
+  mount GoodJob::Engine => 'good_job'
+
   resources :images, only: %i[index new create edit update destroy] do
     resources :image_descriptions, only: %i[create]
   end
