@@ -1,0 +1,19 @@
+# frozen_string_literal: true
+
+module Feature
+  class <%= class_name %> < Feature::Base
+
+    # Steps
+
+    <% steps.each do |step| -%>
+    def <%= step %>
+
+    end
+    <% end -%>
+
+    # Predicate Methods
+
+    private
+
+  end
+end

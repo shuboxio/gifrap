@@ -1,0 +1,13 @@
+Description:
+    Create a new feature object that can be used in system specs
+
+Example:
+    `bin/rails generate feature_object Homepage`
+
+    This will create:
+        spec/support/feature/homepage.rb
+
+    `bin/rails generate feature_object Homepage visit_home has_welcome_message\?`
+
+    This will create this file with `visit_home` and `has_welcome_message?` instance methods:
+        spec/support/feature/homepage.rb
