@@ -33,6 +33,7 @@ end
 
 group :development do
   gem 'i18n-tasks'
+  gem 'letter_opener'
   gem 'overmind'
   gem 'web-console'
 end
