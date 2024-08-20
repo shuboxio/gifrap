@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: d9b5c2e7632a2eaa3596c9353d3878e91a062db2
+  revision: 1f3e35d3d5e265d0c8341b55a62a3341cdece521
   branch: 7-2-stable
   specs:
     actioncable (7.2.0)
@@ -105,7 +105,7 @@ GEM
     base64 (0.2.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
-    bootsnap (1.18.3)
+    bootsnap (1.18.4)
       msgpack (~> 1.2)
     builder (3.3.0)
     capybara (3.40.0)
@@ -117,6 +117,10 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    childprocess (5.1.0)
+      logger (~> 1.5)
+    childprocess (5.1.0)
+      logger (~> 1.5)
     concurrent-ruby (1.3.4)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -152,12 +156,12 @@ GEM
     ffi (1.17.0-x86-linux-gnu)
     ffi (1.17.0-x86_64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
-    fugit (1.11.0)
+    fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
     globalid (1.2.1)
       activesupport (>= 6.1)
-    good_job (4.1.1)
+    good_job (4.2.0)
       activejob (>= 6.1.0)
       activerecord (>= 6.1.0)
       concurrent-ruby (>= 1.3.1)
@@ -178,7 +182,7 @@ GEM
       rails-i18n
       rainbow (>= 2.2.2, < 4.0)
       terminal-table (>= 1.5.1)
-    image_processing (1.12.2)
+    image_processing (1.13.0)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
     io-console (0.7.2)
@@ -205,7 +209,7 @@ GEM
     matrix (0.4.2)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
-    minitest (5.25.0)
+    minitest (5.25.1)
     msgpack (1.7.2)
     nanoid (2.0.0)
     net-imap (0.4.14)
@@ -235,19 +239,19 @@ GEM
     overmind (2.5.1-arm64-darwin)
     overmind (2.5.1-x86-linux)
     overmind (2.5.1-x86_64-darwin)
-    parallel (1.25.1)
-    parser (3.3.4.0)
+    parallel (1.26.3)
+    parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
-    pg (1.5.6)
-    propshaft (0.9.0)
+    pg (1.5.7)
+    propshaft (0.9.1)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
       rack
       railties (>= 7.0.0)
     psych (5.1.2)
       stringio
-    public_suffix (6.0.0)
+    public_suffix (6.0.1)
     puma (6.4.2)
       nio4r (~> 2.0)
     raabro (1.4.0)
@@ -276,11 +280,14 @@ GEM
     rake (13.2.1)
     rdoc (6.7.0)
       psych (>= 4.0.0)
-    redis (4.8.1)
+    redis (5.2.0)
+      redis-client (>= 0.22.0)
+    redis-client (0.22.2)
+      connection_pool
     regexp_parser (2.9.2)
     reline (0.5.9)
       io-console (~> 0.5)
-    rexml (3.3.4)
+    rexml (3.3.5)
       strscan
     rspec-core (3.13.0)
       rspec-support (~> 3.13.0)
@@ -290,7 +297,7 @@ GEM
     rspec-mocks (3.13.1)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
-    rspec-rails (6.1.3)
+    rspec-rails (6.1.4)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       railties (>= 6.1)
@@ -310,7 +317,7 @@ GEM
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.31.3)
+    rubocop-ast (1.32.1)
       parser (>= 3.3.1.0)
     rubocop-capybara (2.21.0)
       rubocop (~> 1.41)
@@ -324,7 +331,7 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
       rubocop-ast (>= 1.31.1, < 2.0)
-    rubocop-rspec (3.0.3)
+    rubocop-rspec (3.0.4)
       rubocop (~> 1.61)
     rubocop-rspec_rails (2.30.0)
       rubocop (~> 1.61)
@@ -351,7 +358,7 @@ GEM
     vite_rails (3.0.17)
       railties (>= 5.1, < 8)
       vite_ruby (~> 3.0, >= 3.2.2)
-    vite_ruby (3.7.0)
+    vite_ruby (3.8.0)
       dry-cli (>= 0.7, < 2)
       rack-proxy (~> 0.6, >= 0.6.1)
       zeitwerk (~> 2.2)
@@ -385,8 +392,10 @@ DEPENDENCIES
   factory_bot_rails
   faker
   good_job
+  letter_opener
   i18n-tasks
   image_processing
+  letter_opener
   nanoid
   overmind
   pg
