@@ -33,5 +33,7 @@ module Gifrap
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.x.default_email_from = ENV.fetch('DEFAULT_EMAIL_FROM', nil)
   end
 end

@@ -1,5 +1,8 @@
 ---
 en:
+  auth_mailer:
+    sign_in_email:
+      subject: Sign in to Gifrap
   images:
     create:
       created: Image was successfully created
@@ -7,3 +10,11 @@ en:
       destroyed: Image was successfully destroyed
     update:
       updated: Image was successfully updated
+  nav:
+    sign_in_text: Sign In
+    sign_in_title: Sign in with email
+  sessions:
+    create:
+      created: Sign-in email sent! Check your email for the magic link.
+    new:
+      submit: Sign In Via Email

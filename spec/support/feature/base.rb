@@ -9,7 +9,7 @@ module Feature
     include FactoryBot::Syntax::Methods
     include RSpec::Mocks::ExampleMethods
 
-    attr_reader :user
+    attr_reader :user, :email
 
     delegate :t, to: I18n
 
@@ -23,6 +23,10 @@ module Feature
       else
         has_css? '.flash.flash-error'
       end
+    end
+
+    def open_email
+      @email = ActionMailer::Base.deliveries.first.parts.first.body.raw_source
     end
   end
 end

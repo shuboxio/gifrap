@@ -5,10 +5,10 @@ source 'https://rubygems.org'
 ruby file: '.tool-versions'
 
 gem 'bootsnap', require: false
-gem 'faker', require: false
+gem 'faker'
 gem 'good_job'
 gem 'image_processing'
-gem 'nanoid', require: false
+gem 'nanoid'
 gem 'pg'
 gem 'propshaft'
 gem 'puma'

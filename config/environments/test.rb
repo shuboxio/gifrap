@@ -70,4 +70,6 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions.
   config.action_controller.raise_on_missing_callback_actions = true
+
+  config.x.default_email_from = ENV.fetch('MAILER_DEFAULT_ADDRESS', 'test@example.com')
 end

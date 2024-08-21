@@ -8,6 +8,8 @@
       "<%= current_user.name %>"
     </span>
 
-    <a href="#" title="Sign in with email" class="mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-transparent hover:bg-white hover:text-indigo-500 lg:mt-0">Sign In</a>
+    <% if signed_out? %>
+      <%= link_to t('nav.sign_in_text'), new_sessions_path, title: t('nav.sign_in_title'), class: "mt-4 inline-block rounded border border-white px-4 py-2 text-sm leading-none text-white hover:border-transparent hover:bg-white hover:text-indigo-500 lg:mt-0" %>
+    <% end %>
   </div>
 </nav>
