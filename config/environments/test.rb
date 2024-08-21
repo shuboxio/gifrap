@@ -50,6 +50,9 @@ Rails.application.configure do
   # incoming request so you'll need to provide the :host parameter yourself.
   config.action_mailer.default_url_options = { host: 'www.example.com' }
 
+  # ActiveJob queue adapter for test env is inline. This will execute jobs immediately.
+  config.active_job.queue_adapter = :inline
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
