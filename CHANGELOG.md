@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- v0.1.4 Pass the base url to the shubox api server to the stimulus uploader controller. ENV -> data attribute -> controller.
+
 ## [1.1.3] - 2024-08-15
 
 ### Fixed

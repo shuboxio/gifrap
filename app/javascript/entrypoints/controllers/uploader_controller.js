@@ -6,11 +6,13 @@ export default class extends Controller {
 
     connect() {
       const shuboxKey = this.element.dataset.shuboxKey
+      const shuboxBaseUrl = this.element.dataset.shuboxBaseUrl
 
       this.shubox = new Shubox(
         '#container',
         {
           key: shuboxKey,
+          baseUrl: shuboxBaseUrl,
           previewsContainer: false,
           success: this.uploadSuccess.bind(this)
         }
