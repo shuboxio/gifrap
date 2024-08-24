@@ -7,8 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- v0.1.4 Add feature that allows for passwordless "log-in". Log-in via email.
+- v0.1.4 Add letter_opener for dev testing of sent emails.
+- v0.1.4 Add good_job as the job/worker solution.
+
 ### Changed
 
+- v0.1.4 Update dependencies (ruby and node/js)
+- v0.1.4 Add feature/page object generator
+- v0.1.4 Upgrade rails to 7.2 (edge)
 - v0.1.4 Pass the base url to the shubox api server to the stimulus uploader controller. ENV -> data attribute -> controller.
 
 ## [1.1.3] - 2024-08-15
