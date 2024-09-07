@@ -2,7 +2,7 @@
   id="container"
   class="mx-auto h-screen max-w-5xl "
   data-controller="uploader"
-  data-action="keydown.esc->uploader#close"
+  data-action="keydown.esc@document->uploader#close"
   data-shubox-key="<%= ENV['SHUBOX_KEY'] %>"
   data-shubox-base-url="<%= ENV.fetch('SHUBOX_BASE_URL', 'https://api.shubox.io') %>">
 

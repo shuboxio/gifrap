@@ -1,0 +1,8 @@
+<%= tag.div class: "max-w-5xl mx-auto" do %>
+  <header class="flex items-center justify-between py-4">
+    <h2 class="font-bold">Image</h2>
+    <%= link_to "edit", edit_image_path(@image), class: "px-4 py-2 bg-purple-200 text-purple-800 rounded-lg font-semibold hover:bg-purple-300 transition duration-300" %>
+  </header>
+
+  <img class="w-full rounded-xl shadow" src="<%= @image.url %>" alt="">
+<% end %>

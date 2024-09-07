@@ -1,0 +1,7 @@
+<%= tag.div class: "max-w-5xl mx-auto" do %>
+  <header>
+    <h2 class="py-4 font-bold">Edit Image</h2>
+  </header>
+
+  <%= render partial: "form", locals: { image: @image } %>
+<% end %>

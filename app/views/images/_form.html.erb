@@ -12,7 +12,7 @@
 
   <%= form.label :nsfw, class: "py-2 block" do %>
     Not safe for work
-    <%= form.check_box :nsfw %>
+    <%= form.check_box :nsfw, checked: form.object.nsfw.present?  %>
   <% end %>
 
   <%= form.submit "Save", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'auth/:token', to: 'auth#create', as: :auth
   resource :sessions, only: %i[new create destroy]
-  resources :images, only: %i[index new create edit update destroy] do
+  resources :images, only: %i[index show new create edit update destroy] do
     resources :image_descriptions, only: %i[create]
   end
 

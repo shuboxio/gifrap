@@ -45,7 +45,7 @@ Below is the breakdown of features being built along with a couple of milestones
     - [x] Masonry layout of images
     - [x] Flash messages
     - [x] Upload and new image modal
-- [ ] No account(s)/users. Log-in via email.
+- [x] No account(s)/users. Log-in via email.
 - [ ] `Images#show`
     - [ ] click to copy URL
 - [ ] `Images#edit`

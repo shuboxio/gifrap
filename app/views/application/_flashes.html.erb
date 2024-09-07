@@ -1,7 +1,11 @@
 <% if flash.any? %>
   <% flash.each do |key, value| %>
-    <div class="flash-<%= key %> mx-auto my-3 flex max-w-5xl items-center justify-center rounded-xl p-6 text-center text-lg">
+    <div
+      data-controller="flash"
+      data-action="keydown.esc@document->flash#dismiss"
+      class="flash-<%= key %> relative mx-auto my-3 flex max-w-5xl items-center justify-center rounded-xl p-6 text-center text-lg">
       <div><%= value %></div>
+      <button type="button" data-action="flash#dismiss" class="absolute right-3 top-1">x</button>
     </div>
   <% end %>
 <% end %>

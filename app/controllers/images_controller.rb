@@ -6,6 +6,12 @@ class ImagesController < ApplicationController
     @image = current_user.images.new(url: '')
   end
 
+  def show
+    @image = Image.where(id: params[:id]).first
+
+    render plain: 'Not found', status: :not_found if @image.nil?
+  end
+
   def new
     url = CGI.unescape(params.fetch(:url, ''))
 
@@ -46,6 +52,8 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.require(:image).permit(:url, :nsfw)
+    params.require(:image).permit(:url, :nsfw).tap do |p|
+      p[:nsfw] = p[:nsfw] == '1' ? DateTime.current : nil
+    end
   end
 end
