@@ -29,6 +29,8 @@ export default class extends Controller {
     }
 
     close() {
-      Turbo.visit('/')
+      if(document.getElementById('new-image')) {
+        Turbo.visit('/')
+      }
     }
 }

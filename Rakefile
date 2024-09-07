@@ -28,7 +28,7 @@ end
 RuboCop::RakeTask.new(:rubocop_changed) do |t|
   globs = "'*.rb' '*.rake' 'Rakefile' ':!db' ':!bin' ':!config'"
   staged_files = `git diff --cached --name-only -- #{globs}`.split("\n")
-  changed_files = `git diff --name-only $(git merge-base master HEAD) -- #{globs}`.split("\n")
+  changed_files = `git diff --name-only $(git merge-base main HEAD) -- #{globs}`.split("\n")
   t.options = ['--display-cop-names', '--autocorrect-all'] + staged_files + changed_files
 end
 
