@@ -11,4 +11,7 @@
   </div>
 </div>
 
-<%= turbo_frame_tag "uploader", class: "hidden inset-0 flex items-center justify-center bg-black/75 backdrop-blur-lg", target: "_top" %>
+<%= turbo_frame_tag "modal",
+  data: { "turbo-action": "advance" },
+  class: "fixed inset-0 flex items-center justify-center bg-black/75 backdrop-blur-lg",
+  target: "_top" %>
